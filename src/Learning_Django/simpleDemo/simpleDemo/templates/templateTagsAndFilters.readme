@@ -1,0 +1,121 @@
+if statement:
+	##########################################
+	# Simple if statement
+	{% if condition %}
+		<b>condition is true</b>
+	{% endif %}
+	
+	##########################################
+	# if statement with else
+	{% if condition %}
+		<b>condition is true</b>
+	{% else %}
+		<b>condition is false.</b>
+	{% endif %}
+	
+	##########################################
+	# if statement with and 
+	{% if condition1 and condition2 %}
+		<b>condition is true</b>
+	{% endif %}
+	
+	##########################################
+	# if statement with or
+	{% if condition1 or condition2 %}
+		<b>condition is true</b>
+	{% endif %}
+	
+	##########################################
+	# if statement with not
+	{% if not condition1 or condition2 %}
+		<b>condition is true</b>
+	{% endif %}
+	
+	##########################################
+	# if statement with not
+	{% if not condition1 or condition2 %}
+		<b>condition is true</b>
+	{% endif %}
+	
+	##########################################
+	# if statement with and and or clauses within the same tag
+	# !!! {% if %} tags don¡¯t allow and and or clauses within the same tag
+	{% if not condition1 or condition2 %}
+		<b>condition is true</b>
+	{% endif %}
+	
+@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+
+for statement
+	##########################################
+	# Simple for statement
+	{% for obj in obj_list %}
+		<li>{{ obj }}</li>
+	{% endfor %}
+	
+	##########################################
+	# for statement with empty
+	{% for obj in obj_list %}
+		<li>{{ obj }}</li>
+	{% empty %}
+		<b>There are no obj.</b>
+	{% endfor %}
+	
+	##########################################
+	# for statement with forloop variable
+	{% for obj in obj_list %}
+		<p>{{ forloop.counter }}: {{ obj }}</p>
+	{% endfor %}
+	# forloop.counter
+	# forloop.counter0
+	# forloop.revcounter
+	# forloop.revcounter0
+	# forloop.first
+	# forloop.last
+	# forloop.parentloop
+	
+@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+	
+ifequal/ifnotequal statement
+	##########################################
+	# simple ifequal statement
+	{% ifequal obj1 obj2 %}
+		<h1>Welcome!</h1>
+	{% endifequal %}
+	
+	##########################################
+	# simple ifnotequal statement
+	{% ifnotequal ojb1 obj2 %}
+		<h1>Welcome!</h1>
+	{% endifnotequal %}
+	
+	##########################################
+	# simple ifequal statement with else
+	{% ifequal obj1 obj2 %}
+		<h1>Welcome!</h1>
+	{% else %}
+		<h1>Not Welcome!</h1>
+	{% endifequal %}
+	
+	# Only template variables, strings, integers, and decimal numbers are allowed as arguments to {% ifequal %}. These are valid examples:
+	# {% ifequal variable 1 %}
+	# {% ifequal variable 1.23 %}
+	# {% ifequal variable 'foo' %}
+	# {% ifequal variable "foo" %}
+	# Any other types of variables, such as Python dictionaries, lists, or Booleans, can¡¯t be hardcoded in {% ifequal %}. These are invalid examples:
+	#! {% ifequal variable True %}
+	#! {% ifequal variable [1, 2, 3] %}
+	#! {% ifequal variable {'key': 'value'} %}
+	
+@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+	
+Comments
+	Usage:
+	1.  {# This is a comment #}
+	2.  This is a {# this is not
+		a comment #}
+		test.
+	3.  {% comment %}
+			This is a
+			multiline comment.
+		{% endcomment %}

@@ -1,0 +1,13 @@
+setup.py
+dependency/__init__.py
+dependency/test_plumbum.py
+hello/__init__.py
+hello/hello.py
+hello1/__init__.py
+hello1/hello.py
+packaging_test.egg-info/PKG-INFO
+packaging_test.egg-info/SOURCES.txt
+packaging_test.egg-info/dependency_links.txt
+packaging_test.egg-info/requires.txt
+packaging_test.egg-info/top_level.txt
+packaging_test.egg-info/zip-safe
