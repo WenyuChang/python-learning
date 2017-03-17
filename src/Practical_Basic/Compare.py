@@ -13,7 +13,7 @@ def compare(a, b):
         print 'a and b have the same type'
 
 if __name__ == '__main__':
-    li1 = [1, 2, 3]
-    li2 = [1, 2, 3]
+    li1 = [1,2,3]
+    li2 = [1,2,3]
     
     compare(li1, li2)

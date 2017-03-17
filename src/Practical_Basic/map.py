@@ -19,3 +19,6 @@ map(f, sequence1, sequence2) is equivalent to: [f(x1, x2) for x1, x2 in zip(sequ
 """
 
 
+def func(x1, x2):
+    return '%s : %s' % (x1, x2)
+print map(func, [1,3,5,7,9], [2,4,6,8,10])

@@ -1,0 +1,8 @@
+__author__ = 'Wenyu'
+aaa = """{'name': 'UCLIM COMMAND', 'area': 'OSYSBI', 'sernum': 'FOC1950NRNU', 'rectime': datetime.datetime(2015, 12, 30, 4, 10, 38), 'limit_id': '15627CF8-FF13-463F-837C-897CC2F9B6DF', 'uuttype': 'SC-DPH154-4U-ATT', 'uniq_id': 3858, 'machine': 'fxcscbuort2w7', 'passfail': 'S', 'value': '<Matrix RowStartIndex="0" ColStartIndex="0" Cols="6" Rows="1"><r0 c0="1" c1="/etc/init.d/opdtcs start\\r" c2="root@picopc7308:" c3="60" c4="&amt&#000;&a&#2925;&#000;&#000;&qu&#000;&#55452;&#3317;Starting radio mgr: OK&qu&#000;&#35244;&#2350;,&a&#3181;&#000;&#000;&am&#000;&#24428;&qu&#38716;&#3304;&#000;Starting SCPI server on 127.0.0.1: OK&qu&#000;&#24020;&#3302;,&a&#2413;&#000;&#000;&a&#50797;&#2428;&#40052;&qu&#49516;&#3004;&#49216;connected to server.&qu&#49264;&#2428;&#31324;,&a&#43117;&#3040;&#47008;&a&#2925;&#1392;&#2014;&qu&#2014;&#16644;&#3035;Starting /opt/ipaccess/bin/sysTestEngApp: OK&qu&#3018;&#000;&#000;,&am&#64284;&#2307;&a&#46701;&#3040;&#000;&qu&#000;&#000;&#36740;Starting pico_status: OK&qu&#18044;&#3035;&#55712;" c5="" /></Matrix>', 'meastime': datetime.datetime(2015, 12, 30, 12, 9, 43), 'step_id': '65477C00-0399-4EEC-A370-AB2C1DE9C9CD', 'attributes': {u'CELL': 28, u'MSG': u'Start_Test_Mode', u'LOOP': 1}, 'type': 'M', 'tst_id': datetime.datetime(2015, 12, 30, 20, 7, 18)}"""
+
+from pympler.asizeof import asizeof
+import sys
+
+print asizeof(aaa)
+print sys.getsizeof(aaa)

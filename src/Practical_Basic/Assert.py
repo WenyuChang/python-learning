@@ -6,3 +6,5 @@ except AssertionError:
     print('a<10')
 else:
     print('a>=10')
+finally:
+    print('done')

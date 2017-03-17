@@ -1,6 +1,6 @@
 __author__ = 'wenychan'
 
-from multiprocessing import Process, Queue, Pipe, Lock, Manager, Pool, pool
+from multiprocessing import Process, Queue, Pipe, Lock, Manager, Pool
 
 
 def process_info(title):
@@ -87,54 +87,11 @@ def usage5():
     print l
 
 
-def internal_func(x):
-    import time
-    ret = x * x
-    time.sleep(1)
-    return ret
-
-
 def usage6():
-    # create a pool of processes which will carry out
-    # tasks submitted to it with the Pool class.
-
     pool = Pool(processes=4)              # start 4 worker processes
-    result = pool.apply_async(internal_func, [10])    # evaluate "f(10)" asynchronously
-    print 'after apply_async'
-    print result.get(timeout=10)           # prints "100" unless your computer is *very* slow
-    result = pool.map_async(internal_func, range(10))          # prints "[0, 1, 4,..., 81]"
-    print 'after map'
-    while not result.ready():
-        pass
-    print result.get()
-
-
-def internal_func1(x, y):
-    ret = x * y
-    return ret
-
-
-def usage70():
-    pool = Pool(processes=1)
-    result = pool.map_async(internal_func1, [[1,2], [3,4]])          # prints "[0, 1, 4,..., 81]"
-    print 'after map'
-    while not result.ready():
-        pass
-    print result.get()
-
-
-def usage7():
-    from multiprocessing.pool import ThreadPool
-
-    pool = ThreadPool(processes=4)              # start 4 worker processes
-    result = pool.apply_async(internal_func, [10])    # evaluate "f(10)" asynchronously
-    print 'after apply_async'
-    print result.get(timeout=10)           # prints "100" unless your computer is *very* slow
-    result = pool.map_async(internal_func, range(10))          # prints "[0, 1, 4,..., 81]"
-    print 'after map'
-    while not result.ready():
-        pass
-    print result.get()
+    result = pool.apply_async(func6, [10])    # evaluate "f(10)" asynchronously
+    print result.get(timeout=1)           # prints "100" unless your computer is *very* slow
+    print pool.map(func6, range(10))          # prints "[0, 1, 4,..., 81]"
 
 
 if __name__ == '__main__':
@@ -148,8 +105,4 @@ if __name__ == '__main__':
 
     # usage5()
 
-    # usage6()
-
-    # usage7()
-
-    usage70()
+    usage6()

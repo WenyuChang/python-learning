@@ -21,11 +21,12 @@ myList = [3,4,6,1,2,0,-1]
 def cmp(x, y):
     if x>y:
         return -1
-    elif x==y:
+    elif x == y:
         return 0
     else:
         return 1
 myList.sort(cmp)
+myList.sort(cmp=lambda x, y: x - y)
 print('These items are:',myList)
 
 #=============================================================

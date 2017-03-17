@@ -18,7 +18,8 @@ print('mylist is', mylist)
 
 #====================================================================================
 
-mylist = shoplist.copy() #make a copy to mylist
+from copy import copy, deepcopy
+mylist = copy(shoplist) #make a copy to mylist
 del mylist[0] #remove first item
 print('shoplist is', shoplist)
 print('mylist is', mylist)

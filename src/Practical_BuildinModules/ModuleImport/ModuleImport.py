@@ -34,21 +34,13 @@ def dynamic_with_importlib():
     my_another_module.fun1()
 
 
-def import_from_file_path():
-    import imp
-    py_path = '/home/wenychan/module.py'
-    module = imp.load_source('module_name', py_path)
-    module.func()
-
 if __name__ == '__main__':
     # __import__(module_name)
     # details seen KCSFullPull POC code
     # or use importlib.import_module()
 
-    # simple_demo()
+    simple_demo()
 
     dynamic_import()
 
-    # dynamic_with_importlib()
-
-    # import_from_file_path()
+    dynamic_with_importlib()

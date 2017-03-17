@@ -91,7 +91,7 @@ help(myFun7)
 #===========================================================
 #Demo of mutable variables in function
 
-def myFun8(a,*argv):
+def myFun8(a, *argv):
     s=a
     print(argv)
     for i in argv:
@@ -104,7 +104,7 @@ myFun8('a','b','c','d','e')
 #===========================================================
 #Demo of dictionary variables in function
 
-def myFun9(a,**dic):
+def myFun9(a, **dic):
     print('a:',a)
     for key,value in dic.items():
         print('%s:%s' % (key,value))
